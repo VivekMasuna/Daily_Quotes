@@ -1,0 +1,68 @@
+<% layout('/layouts/boilerplate') %>
+
+    <style>
+        h1 {
+            color: #141214;
+            text-align: center;
+            margin: 1rem 0;
+            padding: 1rem;
+        }
+
+        blockquote {
+            text-align: center;
+        }
+
+        blockquote p {
+            font-size: larger;
+        }
+
+        .d_t {
+            text-align: center;
+        }
+
+        .d_t b {
+            color: #141214;
+        }
+
+        .daily-quote {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .blockquote-footer {
+            color: #FCFCFC;
+        }
+    </style>
+
+    <body>
+        <h1 class="sedan-sc-regular">Quote of the Day</h1>
+        <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 mt-3 mb-3">
+            <div class="col daily-quote">
+                <div class="quote-body mt-3 mb-3">
+                    <blockquote class="blockquote mb-0">
+                        <p class="lugrasimo-regular"><%= quote.q %></p>
+                        <footer class="blockquote-footer mt-1 lugrasimo-regular"><%= quote.a %></footer>
+                    </blockquote>
+                </div>
+                <div class="d_t mt-3 mb-3">
+                    <b>Date: </b>
+                    <%= new Date().toLocaleDateString() %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Time: </b><span
+                            id="current-time"></span>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function updateTime() {
+                const currentTimeElement = document.getElementById('current-time');
+                const currentTime = new Date().toLocaleTimeString();
+                currentTimeElement.textContent = currentTime;
+            }
+
+            updateTime();
+
+            setInterval(updateTime, 1000);
+        </script>
+    </body>

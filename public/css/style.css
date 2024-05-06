@@ -1,0 +1,213 @@
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: #FCFCFC;
+    background-color: #69747C;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+
+.navbar {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    background-color: #141214;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+}
+
+.fa-quora {
+    color: #c52726;
+    font-size: 2rem;
+}
+
+.nav-logo a,
+.nav-button a {
+    color: #FCFCFC;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+}
+
+.nav-logo {
+    font-size: 32px;
+    margin: 0 5rem 0 2rem;
+}
+
+.nav-button {
+    background-color: #c52726;
+    border-radius: 50px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 2rem 0 0;
+}
+
+.anim-layer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: #FCFCFC;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-button:hover .anim-layer {
+    width: 100%;
+    left: 0;
+}
+
+.nav-button:hover a {
+    color: #141214;
+}
+
+.nav-button a {
+    display: block;
+    padding: 10px 20px;
+    color: #FCFCFC;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+#hamburger-menu,
+#mobile-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    #mobile-menu {
+        background-color: #c52726;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+        z-index: 999;
+    }
+
+    .mobile-nav-button {
+        background-color: #141214;
+        border-radius: 50px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .mobile-nav-button .anim-layer {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0;
+        height: 100%;
+        background-color: #FCFCFC;
+        transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .mobile-nav-button:hover .anim-layer {
+        width: 100%;
+        left: 0;
+    }
+
+    .mobile-nav-button:hover a {
+        color: #141214;
+    }
+
+    .mobile-nav-button a {
+        display: block;
+        padding: 10px 20px;
+        color: #FCFCFC;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    #hamburger-cross {
+        display: block;
+        color: #FCFCFC;
+        cursor: pointer;
+        font-size: 40px;
+        position: absolute;
+        top: 20px;
+        right: 26px;
+    }
+
+    #hamburger-menu {
+        display: block;
+        color: #c52726;
+        cursor: pointer;
+        font-size: 24px;
+        margin: 0 1rem 0 0;
+    }
+}
+
+/* Footer */
+
+.f-info {
+    color: #FCFCFC;
+    text-align: center;
+    display: flex;
+    height: 6rem;
+    background-color: #141214;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 5px 15px 4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 7px 5px 15px 4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 5px 15px 4px rgba(0, 0, 0, 0.75);
+}
+
+.f-info-socials, .f-info-brand {
+    color: #c52726;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #c52726;
+}
+
+.lugrasimo-regular {
+    font-family: "Lugrasimo", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sedan-sc-regular {
+    font-family: "Sedan SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
